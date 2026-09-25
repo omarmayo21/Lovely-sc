@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60" fill="none">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&amp;family=Tajawal:wght@400;500;700&amp;display=swap');
+      .brand-eng { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; fill: #2C1E1A; }
+      .brand-sub { font-family: 'Tajawal', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 2px; fill: #758A73; }
+      .leaf-stroke { stroke: #758A73; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .leaf-fill { fill: #E8EFE6; }
+      .heart-accent { fill: #D99B8B; }
+    </style>
+  </defs>
+  <!-- Elegant Botanical Emblem -->
+  <g transform="translate(8, 6)">
+    <circle cx="24" cy="24" r="22" fill="#FAF5EF" stroke="#EFE6DC" stroke-width="1"/>
+    <!-- Organic Leaf / Sprout Illustration -->
+    <path d="M24 36 C24 24 16 18 13 15 C20 16 25 21 25 28 C26 21 31 16 38 15 C35 18 27 24 27 36 Z" fill="#D99B8B" opacity="0.85"/>
+    <path d="M24 38 C24 26 18 20 15 17 C21 18 25 23 25 30 C26 23 30 18 36 17 C33 20 26 26 26 38 Z" fill="#758A73" opacity="0.6"/>
+    <!-- Tiny heart/dot -->
+    <circle cx="24.5" cy="12" r="2.2" fill="#D99B8B"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="66" y="32" class="brand-eng" font-size="22" letter-spacing="0.5">Lovely</text>
+  <text x="135" y="32" class="brand-eng" font-size="22" font-style="italic" fill="#758A73" font-weight="400">SkinCare</text>
+  <text x="67" y="47" class="brand-sub">عناية فاخرة لبشرتك • بوتيك أصلي</text>
+</svg>

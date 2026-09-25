@@ -1,0 +1,58 @@
+import { Category } from '../types';
+
+export const mockCategories: Category[] = [
+  {
+    id: 'cat-1',
+    name: 'واقي شمس وحماية',
+    englishName: 'Sun Care & SPF',
+    slug: 'sunscreen',
+    icon: 'Sun',
+    description: 'حماية فائقة بمعامل SPF50+ مع قوام خفيف ومكونات مغذية للبشرة',
+    productCount: 8,
+  },
+  {
+    id: 'cat-2',
+    name: 'سيروم وعلاجات مركزة',
+    englishName: 'Serums & Ampoules',
+    slug: 'serums',
+    icon: 'Sparkles',
+    description: 'تركيبات علاجية عالية الفعالية لاستهداف التصبغات، الترميم، والنضارة',
+    productCount: 12,
+  },
+  {
+    id: 'cat-3',
+    name: 'تونر وخلاصات مهدئة',
+    englishName: 'Toners & Essences',
+    slug: 'toners',
+    icon: 'Droplets',
+    description: 'موازنة حموضة البشرة، ترطيب عميق، وتهدئة فورية للمسام الحساسة',
+    productCount: 7,
+  },
+  {
+    id: 'cat-4',
+    name: 'مرطبات وترميم الحاجز',
+    englishName: 'Moisturizers & Creams',
+    slug: 'moisturizers',
+    icon: 'ShieldCheck',
+    description: 'حبس الرطوبة داخل البشرة وتقوية حاجز الحماية الطبيعي بالسيراميد',
+    productCount: 9,
+  },
+  {
+    id: 'cat-5',
+    name: 'غسول ومنظفات لطيفة',
+    englishName: 'Cleansers & Oils',
+    slug: 'cleansers',
+    icon: 'Flame',
+    description: 'تنظيف عميق للمسام والشوائب دون تجريد البشرة من ترطيبها الطبيعي',
+    productCount: 6,
+  },
+  {
+    id: 'cat-6',
+    name: 'عناية خاصة وعلاج الحبوب',
+    englishName: 'Special Care & Patches',
+    slug: 'special-care',
+    icon: 'Heart',
+    description: 'لصقات علاج الحبوب الموضعية، مقشرات الأحماض اللطيفة، وعناية الشفاه',
+    productCount: 5,
+  },
+];

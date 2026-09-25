@@ -1,0 +1,58 @@
+import { Customer } from '../types';
+
+export const mockCustomers: Customer[] = [
+  {
+    id: 'cust-1',
+    name: 'ياسمين أحمد محمود',
+    phone: '01012345678',
+    address: 'القاهرة - مصر الجديدة، شارع الميرغني، عمارة 14',
+    totalOrders: 4,
+    totalSpent: 4850,
+    lastOrderDate: '2026-09-19',
+  },
+  {
+    id: 'cust-2',
+    name: 'سارة خالد المنشاوي',
+    phone: '01122334455',
+    address: 'الجيزة - الدقي، شارع مصدق، برج الأطباء',
+    totalOrders: 3,
+    totalSpent: 3920,
+    lastOrderDate: '2026-09-18',
+  },
+  {
+    id: 'cust-3',
+    name: 'مريم طارق العوضي',
+    phone: '01234567890',
+    address: 'الإسكندرية - سموحة، شارع فوزي معاذ',
+    totalOrders: 2,
+    totalSpent: 2150,
+    lastOrderDate: '2026-09-17',
+  },
+  {
+    id: 'cust-4',
+    name: 'نور الدين مصطفى',
+    phone: '01555544433',
+    address: 'القاهرة - التجمع الخامس، النرجس عمارات',
+    totalOrders: 5,
+    totalSpent: 6780,
+    lastOrderDate: '2026-09-16',
+  },
+  {
+    id: 'cust-5',
+    name: 'هبة عبد الرحمن',
+    phone: '01099887766',
+    address: 'المنصورة - شارع المشاية السفلية',
+    totalOrders: 1,
+    totalSpent: 590,
+    lastOrderDate: '2026-09-15',
+  },
+  {
+    id: 'cust-6',
+    name: 'رانيا عصام الجندي',
+    phone: '01033445566',
+    address: 'القاهرة - المعادي، شارع النصر، عمارة 22',
+    totalOrders: 6,
+    totalSpent: 8200,
+    lastOrderDate: '2026-09-12',
+  },
+];
