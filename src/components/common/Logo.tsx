@@ -33,7 +33,8 @@ export const Logo: React.FC<LogoProps> = ({
         width={width}
         height={height}
         fill="none"
-        className="max-w-full h-auto"
+        className="w-full max-w-full h-auto"
+        style={{ maxWidth: `${width}px` }}
       >
         <defs>
           <style>

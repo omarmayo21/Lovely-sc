@@ -99,29 +99,33 @@ export const Header: React.FC = () => {
   return (
     <header className="sticky top-0 z-40 w-full">
       {/* Top Announcement Bar */}
-      <div className="bg-primary text-white text-[12px] py-2 px-4 border-b border-primary-hover/50">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-2 text-white/90">
+      <div className="bg-primary text-white text-[11px] sm:text-[12px] py-1.5 sm:py-2 px-3 sm:px-4 border-b border-primary-hover/50">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center sm:justify-between gap-1.5 sm:gap-2 text-center sm:text-start">
+          <div className="flex items-center justify-center sm:justify-start gap-1.5 text-white/90 w-full sm:w-auto">
             <Sparkles size={13} className="text-secondary flex-shrink-0" />
-            <span className="truncate">{t('common.topBarAnnouncement')}</span>
+            <span className="leading-snug break-words">{t('common.topBarAnnouncement')}</span>
           </div>
-          <div className="flex items-center gap-4 text-xs">
+          <div className="flex items-center justify-center sm:justify-end gap-3 sm:gap-4 text-[11px] sm:text-xs flex-wrap w-full sm:w-auto">
             <a
               href={`tel:${settings.primaryPhone}`}
-              className="flex items-center gap-1 text-white/80 hover:text-white transition-colors"
-              dir="ltr"
+              className="inline-flex items-center gap-1.5 text-white/80 hover:text-white transition-colors"
             >
-              <Phone size={12} className="text-secondary" />
-              <span>{t('common.contactSiraj')}: {settings.primaryPhone}</span>
+              <Phone size={11} className="text-secondary flex-shrink-0" />
+              <span className="inline-flex items-center gap-1">
+                <span>{t('common.contactSiraj')}:</span>
+                <span dir="ltr" className="font-mono">{settings.primaryPhone}</span>
+              </span>
             </a>
             <span className="text-white/30 hidden sm:inline">|</span>
             <a
               href={`tel:${settings.secondaryPhone}`}
-              className="hidden sm:flex items-center gap-1 text-white/80 hover:text-white transition-colors"
-              dir="ltr"
+              className="hidden sm:inline-flex items-center gap-1.5 text-white/80 hover:text-white transition-colors"
             >
-              <Phone size={12} className="text-secondary" />
-              <span>{t('common.contactHassan')}: {settings.secondaryPhone}</span>
+              <Phone size={11} className="text-secondary flex-shrink-0" />
+              <span className="inline-flex items-center gap-1">
+                <span>{t('common.contactHassan')}:</span>
+                <span dir="ltr" className="font-mono">{settings.secondaryPhone}</span>
+              </span>
             </a>
           </div>
         </div>
@@ -129,10 +133,17 @@ export const Header: React.FC = () => {
 
       {/* Main Navigation Bar */}
       <div className="bg-cream/95 backdrop-blur-md border-b border-outline-variant/80 shadow-soft-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
           {/* Logo */}
-          <Link to="/" className="flex-shrink-0">
-            <Logo size="md" />
+          <Link
+            to="/"
+            className="min-w-0 flex-shrink flex items-center focus:outline-none rounded-lg"
+            aria-label="Lovely SkinCare Home"
+          >
+            <Logo
+              size="md"
+              className="w-[130px] min-[360px]:w-[145px] min-[390px]:w-[165px] min-[430px]:w-[185px] md:w-[220px] h-auto flex-shrink-0"
+            />
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -239,16 +250,16 @@ export const Header: React.FC = () => {
           </div>
 
           {/* Actions: Language Switcher, WhatsApp & Cart */}
-          <div className="flex items-center gap-2.5 sm:gap-3">
+          <div className="flex items-center gap-1.5 sm:gap-3 flex-shrink-0">
             {/* Language Switcher Pill */}
             <button
               onClick={toggleLanguage}
-              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold bg-white/80 hover:bg-white text-primary border border-outline-variant/60 shadow-soft-sm hover:border-secondary/40 transition-all active:scale-95 cursor-pointer"
+              className="inline-flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-full text-xs font-semibold bg-white/80 hover:bg-white text-primary border border-outline-variant/60 shadow-soft-sm hover:border-secondary/40 transition-all active:scale-95 cursor-pointer flex-shrink-0"
               title={language === 'ar' ? 'Switch to English' : 'التحويل إلى العربية'}
               aria-label="Language Switcher"
             >
-              <Globe size={14} className="text-secondary" />
-              <span className="font-sans font-bold">{language === 'ar' ? 'EN' : 'عربي'}</span>
+              <Globe size={13} className="text-secondary sm:w-3.5 sm:h-3.5 flex-shrink-0" />
+              <span className="font-sans font-bold text-[11px] sm:text-xs leading-none">{language === 'ar' ? 'EN' : 'عربي'}</span>
             </button>
 
             {/* WhatsApp Consultation */}
@@ -256,7 +267,7 @@ export const Header: React.FC = () => {
               href={`https://wa.me/${settings.whatsappNumber}?text=${encodeURIComponent(t('common.whatsappDefaultMessage'))}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-2 bg-tertiary/10 text-tertiary-dark hover:bg-tertiary/20 rounded-full border border-tertiary/20 transition-all"
+              className="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-2 bg-tertiary/10 text-tertiary-dark hover:bg-tertiary/20 rounded-full border border-tertiary/20 transition-all flex-shrink-0"
             >
               <MessageCircle size={14} className="text-tertiary" />
               <span>{t('common.whatsappConsultation')}</span>
@@ -265,12 +276,12 @@ export const Header: React.FC = () => {
             {/* Cart Button */}
             <button
               onClick={() => setIsCartDrawerOpen(true)}
-              className="relative p-2.5 text-primary hover:bg-white/80 rounded-full border border-outline-variant/60 transition-all shadow-sm"
+              className="relative p-2 sm:p-2.5 text-primary hover:bg-white/80 rounded-full border border-outline-variant/60 transition-all shadow-sm flex-shrink-0"
               aria-label={t('nav.cart')}
             >
-              <ShoppingBag size={20} />
+              <ShoppingBag size={18} className="sm:w-5 sm:h-5" />
               {totalItems > 0 && (
-                <span className={`absolute -top-1 w-5 h-5 bg-secondary text-white text-[11px] font-bold rounded-full flex items-center justify-center animate-fade-in shadow-sm ${
+                <span className={`absolute -top-1 w-4 h-4 sm:w-5 sm:h-5 bg-secondary text-white text-[10px] sm:text-[11px] font-bold rounded-full flex items-center justify-center animate-fade-in shadow-sm ${
                   isRTL ? '-left-1' : '-right-1'
                 }`}>
                   {totalItems}
@@ -281,10 +292,10 @@ export const Header: React.FC = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-primary md:hidden rounded-lg hover:bg-surface-container-low transition-colors"
+              className="p-1.5 sm:p-2 text-primary md:hidden rounded-lg hover:bg-surface-container-low transition-colors flex-shrink-0 focus:outline-none"
               aria-label="Menu"
             >
-              {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+              {isMobileMenuOpen ? <X size={20} className="sm:w-[22px] sm:h-[22px]" /> : <Menu size={20} className="sm:w-[22px] sm:h-[22px]" />}
             </button>
           </div>
         </div>
@@ -373,16 +384,16 @@ export const Header: React.FC = () => {
               </Link>
             </div>
 
-            <div className="pt-3 border-t border-outline-variant/50 text-xs text-on-surface-muted space-y-1.5 flex items-center justify-between">
-              <div className="flex items-center gap-2">
+            <div className="pt-3 border-t border-outline-variant/50 text-xs text-on-surface-muted flex items-center justify-between gap-2">
+              <div className="flex items-center gap-2 min-w-0 flex-1">
                 <MapPin size={13} className="text-secondary flex-shrink-0" />
                 <span className="truncate">{settings.branchAddress}</span>
               </div>
               <button
                 onClick={toggleLanguage}
-                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white text-primary border border-outline-variant"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-white text-primary border border-outline-variant shadow-soft-sm hover:border-secondary/40 flex-shrink-0 cursor-pointer"
               >
-                <Globe size={13} className="text-secondary" />
+                <Globe size={13} className="text-secondary flex-shrink-0" />
                 <span>{language === 'ar' ? 'English' : 'العربية'}</span>
               </button>
             </div>
